@@ -1,0 +1,9 @@
+drafting_task:
+  description: >
+    Write a comprehensive draft about: '{topic}'.
+
+    If there is any feedback provided, you MUST incorporate it into your revision:
+    {feedback}
+  expected_output: >
+    A full, well-written draft formatted in Markdown.
+  agent: writer

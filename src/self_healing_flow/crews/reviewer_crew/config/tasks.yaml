@@ -1,0 +1,9 @@
+review_task:
+  description: >
+    Review the following draft. Assess its grammar, tone, depth, and clarity. 
+    Assign a score between 1 and 10, and provide clear feedback:
+    
+    {draft}
+  expected_output: >
+    A review output containing a numeric score (1-10) and detailed feedback.
+  agent: reviewer

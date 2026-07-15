@@ -4,8 +4,8 @@ from crewai.flow.flow import Flow, listen, router, start
 from crewai import CrewOutput
 from dotenv import load_dotenv
 
-from self_healing_flow.crews.writer_crew.writer_crew import WriterCrew
-from self_healing_flow.crews.reviewer_crew.reviewer_crew import ReviewerCrew, ReviewResult
+from content_review_flow.crews.writer_crew.writer_crew import WriterCrew
+from content_review_flow.crews.reviewer_crew.reviewer_crew import ReviewerCrew, ReviewResult
 
 class ReviewState(BaseModel):
     topic: str = ""

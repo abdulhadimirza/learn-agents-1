@@ -3,7 +3,7 @@ from crewai.project import CrewBase, agent, crew, task
 
 @CrewBase
 class WriterCrew:
-    """Writer Crew for the self healing flow."""
+    """Writer Crew for the content review flow."""
 
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"

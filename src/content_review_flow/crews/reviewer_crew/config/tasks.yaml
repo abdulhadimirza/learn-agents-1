@@ -1,9 +1,9 @@
 review_task:
   description: >
-    Review the following draft. Assess its grammar, tone, depth, and clarity. 
-    Assign a score between 1 and 10, and provide clear feedback:
+    Review the draft for grammar, tone, depth, and clarity. 
+    Use the Character Counter Tool to find the exact character count and factor it into your review.
     
     {draft}
   expected_output: >
-    A review output containing a numeric score (1-10) and detailed feedback.
+    A numeric score (1-10) and exactly 3-5 concise bullet points of actionable feedback (including character count). Keep feedback under 50 words. No pleasantries.
   agent: reviewer

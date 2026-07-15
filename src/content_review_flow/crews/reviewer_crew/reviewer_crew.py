@@ -2,13 +2,15 @@ from pydantic import BaseModel
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+from content_review_flow.tools.character_counter import CharacterCounterTool
+
 class ReviewResult(BaseModel):
     score: int
     feedback: str
 
 @CrewBase
 class ReviewerCrew:
-    """Reviewer Crew for the self healing flow."""
+    """Reviewer Crew for the content review flow."""
 
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
@@ -17,6 +19,7 @@ class ReviewerCrew:
     def reviewer(self) -> Agent:
         return Agent(  # type: ignore
             config=self.agents_config["reviewer"],  # type: ignore
+            tools=[CharacterCounterTool()],
             verbose=True
         )
 
